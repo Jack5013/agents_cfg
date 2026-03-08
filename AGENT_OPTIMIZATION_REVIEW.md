@@ -76,3 +76,23 @@
 - `.opencode/agents/system-architect.md`
 - `.opencode/agents/sw-engineer.md`
 - `AGENT_VERSION.md`
+
+---
+
+## 追加优化（规则审阅后合并）
+
+### 审核结果
+- 用户已审核并确认：`AGENTS_OPTIMIZATION_PROPOSAL.md` 全部通过。
+
+### 合并内容
+- daily-reflection 增加备份失败降级条款。
+- 安全分层增加 `git push` 外部操作例外说明。
+- 项目编排增加门禁记录模板。
+- 技能缺口处理中增加安装节流（单阶段最多 3 个）。
+- 仓库拆分策略增加提交规范。
+- 计划执行一致性增加偏离说明模板。
+
+### 本次变更文件
+- `AGENTS.md`
+- `AGENT_VERSION.md`
+- `AGENT_OPTIMIZATION_REVIEW.md`
