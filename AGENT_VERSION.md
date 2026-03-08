@@ -1,11 +1,16 @@
 # AGENT_VERSION
 
 ## Current
-- version: `0.2.0`
+- version: `0.2.1`
 - date: `2026-03-08`
-- scope: `agent_cfg` rules, subagent职责强化, skill治理与审计
+- scope: `agent_cfg` rules, 执行一致性防偏离, 子代理阶段门约束
 
 ## Changelog
+
+### 0.2.1
+- 新增“计划执行一致性”强制规则，禁止方案门通过后随意偏离。
+- 为 `project-analyst` 增加阶段门检查结论输出要求。
+- 为 `system-architect` 与 `sw-engineer` 增加“偏离需先确认”的执行边界。
 
 ### 0.2.0
 - 新增 `project-analyst` 并接入主 Agent 调度。

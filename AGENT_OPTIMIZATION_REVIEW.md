@@ -57,3 +57,22 @@
 - 已按用户审批安装并落地 6 个本地技能包到 `.opencode/skills/`。
 - 已将技能使用说明同步到对应子代理提示词。
 - 审计日志已写入 `memory/skill_audit.jsonl`。
+
+---
+
+## 追加优化（执行偏离纠偏）
+
+### 问题
+- 出现“方案门已确认但实现路径偏离主方案”的执行偏差。
+
+### 修复
+- 在 `AGENTS.md` 新增“计划执行一致性（强制）”章节。
+- 强制：未触发回退条件前，不得推进备选方案实现。
+- 强制：偏离前必须提交偏离说明并获得用户确认。
+
+### 相关文件
+- `AGENTS.md`
+- `.opencode/agents/project-analyst.md`
+- `.opencode/agents/system-architect.md`
+- `.opencode/agents/sw-engineer.md`
+- `AGENT_VERSION.md`
