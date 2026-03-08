@@ -11,6 +11,10 @@ agent: build
 4. 回放当日 `memory/` 与会话记录，对比 `MEMORY.md` 基线，识别偏差与低效点。
 5. 将复盘结论追加到当日 memory 文件，更新 `MEMORY.md`/`AGENTS.md`/`TOOLS.md`（如需要）。
 6. 输出中文简报三段：同步、复盘、建议。
+7. 每日自优化：
+   - 优化前先提交并推送当前版本（回滚基线）。
+   - 仅优化主 Agent 与最相关子代理描述（最多 2 个）。
+   - 将优化项写入 `AGENT_OPTIMIZATION_REVIEW.md` 供用户审核。
 
 红线：
 - 严禁未经确认安装 skill。
