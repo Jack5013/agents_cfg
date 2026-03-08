@@ -1,11 +1,32 @@
 # AGENT_VERSION
 
 ## Current
-- version: `0.2.2`
-- date: `2026-03-08`
-- scope: `agent_cfg` rules, 门禁记录与偏离模板标准化, 外部动作边界补强
+- version: `0.2.6`
+- date: `2026-03-09`
+- scope: `agent_cfg` 采纳 requirements-clarity / systematic-debugging / executing-plans 并同步主规则与分工子代理
 
 ## Changelog
+
+### 0.2.6
+- 在 `AGENTS.md` 的热门写法章节新增：`executing-plans`、`requirements-clarity`、`systematic-debugging`。
+- 在 `project-analyst` 提示词新增需求澄清前置（Why/KISS）。
+- 在 `sw-engineer` 提示词新增系统化调试证据链（现象->假设->实验->结论）。
+- 将每周巡检候选状态从“待确认”更新为“已采纳”。
+
+### 0.2.5
+- 新增 `research/agentskills/selections/2026-03-09.md`，沉淀 agentskills.me 热门流程技能筛选与适配结论。
+- `AGENTS.md` 新增“热门 Agent 写法迁移（agentskills.me）”章节。
+- 为 `project-analyst/sw-engineer/sw-qa/devops-ci` 补充热门流程写法落地条款。
+- 新增 `research/agentskills/` 本地资料库，包含规范摘要、热门清单与缓存策略。
+
+### 0.2.4
+- 新增 `research/agentskills/style-maps/whitelist-map-v1.md`，沉淀白名单来源与分工映射规则。
+- 为全部子代理补充“高质量写法迁移”段，统一触发词、标准流程、输出模板与反模式。
+
+### 0.2.3
+- 新增“多子代理联合评审（强制）”规则，明确触发场景、参与角色与通过条件。
+- 为全部子代理补充统一评审输出卡（立场/证据/风险/回滚/阻塞项）。
+- 按审批落地 `vitest`、`webapp-testing`、`turborepo` 技能并写入审计。
 
 ### 0.2.2
 - daily-reflection 增加 push 失败降级说明与待推清单输出要求。

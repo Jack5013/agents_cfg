@@ -5,10 +5,12 @@ OpenCode agent configuration workspace for multi-role engineering collaboration.
 ## What this repo contains
 
 - `AGENTS.md` - Core governance rules (skill approval, safety boundaries, daily reflection)
+- `WORKSPACE_MAP.md` - Workspace structure and document placement guide
 - `opencode.json` - OpenCode runtime permissions and agent/task policies
 - `.opencode/agents/` - Subagent definitions (software, FPGA, embedded, QA, DevOps, skill-manager)
 - `.opencode/commands/` - Reusable commands (`daily-reflection`, `self-grow`)
 - `.opencode/skills/` - Local skill definitions and governance templates
+- `research/` - Research archives, weekly reviews, style mapping, governance proposals
 - `TEAM_REQUIREMENTS_V1.md` - Team requirement analysis baseline
 - `openclaw_agent_ref/` - Chinese-localized OpenClaw reference documents
 
