@@ -5,6 +5,7 @@
       "permission": {
         "task": {
           "*": "ask",
+          "project-analyst": "allow",
           "skill-manager": "allow",
           "system-architect": "allow",
           "sw-engineer": "allow",

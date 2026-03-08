@@ -30,3 +30,30 @@
 1. `git log --oneline` 找到优化前基线提交。
 2. 需要回退时切换到该提交或按文件级恢复。
 3. 若已推送，优先通过新提交回滚，避免强推。
+
+---
+
+## 追加优化（项目重启：masterduel-daily-bot）
+
+### 新增文件
+- `projects/masterduel-daily-bot/docs/KICKOFF_EXECUTION_PLAN_V1.md`
+- `projects/masterduel-daily-bot/docs/KEY_SKILLS_CANDIDATES_V1.md`
+- `projects/masterduel-daily-bot/docs/RESEARCH_NOTES_V1.md`
+
+### 更新的代理
+- `.opencode/agents/project-analyst.md`
+- `.opencode/agents/system-architect.md`
+- `.opencode/agents/sw-engineer.md`
+- `.opencode/agents/sw-qa.md`
+- `.opencode/agents/devops-ci.md`
+
+### 关键变化
+- 将“复用优先 + 多方案对比 + ADR”显式写入架构代理。
+- 将“POC 先行 + 任务识别/计数/领奖 dry-run”写入研发代理。
+- 将“85% 成功率 / 60 分钟”写入测试门禁。
+- 输出项目关键 skill 候选清单（待审批，不自动安装）。
+
+### 审批后落地（2026-03-08）
+- 已按用户审批安装并落地 6 个本地技能包到 `.opencode/skills/`。
+- 已将技能使用说明同步到对应子代理提示词。
+- 审计日志已写入 `memory/skill_audit.jsonl`。
