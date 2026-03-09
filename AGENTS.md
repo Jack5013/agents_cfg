@@ -1,10 +1,3 @@
-name: daily-reflection
-description: >
-  每日0点流程（Asia/Shanghai）：先同步到 GitHub，再复盘优化。
-  触发词：每日复盘、nightly review、sync & improve。
-  幂等：同一自然日仅执行一次。
----
-
 # OpenCode 工作规则（精简版）
 
 ## 1) skill-manager 治理
@@ -53,6 +46,7 @@ description: >
 - 模糊表达（如“可以试试”）无效。
 - 批准 TTL 10 分钟，过期重批。
 - 仅对指定 `name@version` 生效，版本变化需重批。
+- 任何不匹配审批语法的输入一律视为 NO-OP（不执行任何安装/启用），并返回正确口令示例。
 
 ### 提案模板（必须）
 - 技能、来源、当前痛点、预期收益、所需权限、风险等级、安全校验、回滚方案、批准后动作。
@@ -87,6 +81,8 @@ description: >
 ---
 
 ## 3) 每日复盘流程（daily-reflection）
+
+> 执行模板以 `.opencode/commands/daily-reflection.md` 为准；本节仅保留治理边界与结果要求。
 
 ### 备份（优先执行）
 
@@ -198,6 +194,17 @@ description: >
 - 结论：通过 / 不通过
 - 依据：文档路径或测试结果
 - 时间：YYYY-MM-DD HH:mm (Asia/Shanghai)
+
+### 阶段状态机（强制）
+- 统一状态：`DISCOVERY -> PLAN_APPROVED -> POC_VALIDATED -> BUILD -> VERIFY -> RELEASE`。
+- 进入下一状态前必须满足“通过条件”，否则停留当前状态并输出阻塞项。
+- 每次状态迁移必须记录 5 项：
+  1. 输入（本状态使用的材料）
+  2. 通过条件（量化门槛）
+  3. 输出物（文档/代码/测试）
+  4. 失败处理（回退到哪个状态）
+  5. 责任角色（主责子代理）
+- 禁止跳状态推进（例如未完成 POC_VALIDATED 直接进入 BUILD）。
 
 ### 复用优先原则
 - 默认先评估成熟方案/开源框架，避免重复造轮子。

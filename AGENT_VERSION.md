@@ -1,11 +1,17 @@
 # AGENT_VERSION
 
 ## Current
-- version: `0.2.6`
-- date: `2026-03-09`
-- scope: `agent_cfg` 采纳 requirements-clarity / systematic-debugging / executing-plans 并同步主规则与分工子代理
+- version: `0.2.7`
+- date: `2026-03-10`
+- scope: `agent_cfg` 治理与执行解耦、审批默认拒绝兜底、阶段状态机标准化
 
 ## Changelog
+
+### 0.2.7
+- 修复 `AGENTS.md` 头部格式，移除误放的 command frontmatter，恢复为纯治理文档。
+- 在 skill 审批协议补充“语法不匹配即 NO-OP”默认拒绝兜底规则。
+- 新增阶段状态机（DISCOVERY -> PLAN_APPROVED -> POC_VALIDATED -> BUILD -> VERIFY -> RELEASE）与迁移记录要求。
+- 明确 `daily-reflection` 的执行模板以 `.opencode/commands/daily-reflection.md` 为准，AGENTS 仅保留治理边界。
 
 ### 0.2.6
 - 在 `AGENTS.md` 的热门写法章节新增：`executing-plans`、`requirements-clarity`、`systematic-debugging`。

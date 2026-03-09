@@ -1,7 +1,13 @@
 # AGENT_OPTIMIZATION_REVIEW
 
 ## 日期
-- 2026-03-08
+- 2026-03-10
+
+## 本轮优化（P0：治理收敛）
+1. 治理/执行解耦：`AGENTS.md` 移除误放的 command frontmatter，避免解析歧义。
+2. 审批协议加兜底：语法不匹配一律 NO-OP，防止模糊审批误触发。
+3. 阶段状态机标准化：统一状态与迁移记录字段，减少阶段漂移与漏记。
+4. daily-reflection 归口：执行模板以 `.opencode/commands/daily-reflection.md` 为准，AGENTS 仅保留边界。
 
 ## 本轮优化项（按影响度）
 1. 强制主 Agent 先做需求确认五项（目标/范围/验收/约束/风险）。
